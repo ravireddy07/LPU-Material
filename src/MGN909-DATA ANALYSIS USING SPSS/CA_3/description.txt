@@ -1,0 +1,18 @@
+2 are Non-Parametric
+4 are Parametric
+
+1)
+
+We don't have normalized data.
+no T-test(sample <30)
+
+2)
+
+Paired Test(Two different are going to be applied)
+
+
+3)
+
+4)
+
+6)

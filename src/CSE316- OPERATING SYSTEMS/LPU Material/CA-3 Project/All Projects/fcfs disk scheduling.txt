@@ -1,0 +1,35 @@
+//send _write
+#include<stdlib.h>
+#include<stdio.h>
+#include<unistd.h>
+#include<string.h>
+#include<sys/msg.h>
+int main()
+{
+	int msgid;
+	char buff[100];
+	
+	msgid=msgget((key_t)12,0666|IPC_CREAT);
+	printf("Enter text:\n");
+	fgets(buff,100,stdin);   //reads data into buffer from standard input
+	msgsnd(msgid,&buff,100,0); // writes data to queue
+}
+
+
+
+//read
+#include<stdlib.h>
+#include<stdio.h>
+#include<unistd.h>
+#include<string.h>
+#include<sys/msg.h>
+int main()
+{
+	int msgid;
+	char buff[100];
+	
+	msgid=msgget((key_t)12,0666|IPC_CREAT);
+	printf("Message read from queue:\n");
+	msgrcv(msgid,&buff,100,0,0); //reads data from queue into buffer
+	printf("%s",buff);
+}

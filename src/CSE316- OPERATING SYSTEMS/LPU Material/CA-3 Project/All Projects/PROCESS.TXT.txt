@@ -1,0 +1,80 @@
+#include<stdio.h>
+#include<unistd.h>
+void main()
+{
+printf("the process id is %d",(int)getpid());
+printf("the parent process id is %d",(int)getppid());
+return 0;
+}
+
+******duplicate process*********
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+int main()
+{
+pid_t pid;
+printf("program process id is %d",getpid());
+pid=fork();
+if(pid!=0)
+{
+printf("this is the parent process with id %d",getpid());
+printf("the child process id is %d",pid);
+}
+else
+printf("this is the parent process , with id %d",getpid());
+return 0;
+}
+
+********zombie********
+int main()
+{
+pid_t pid;
+pid=fork();
+if(pid>0)
+{
+sleep(60);
+}
+else
+{
+printf("this is child process")
+exit(0);
+}
+return 0;
+}
+*************parent********
+#include<errno.h>
+int main()
+{
+pid_t pid;
+pid=fork();
+if(pid==-1)
+{
+fprintf(stderr,"can't fork,error %d",errrno);
+exit(EXIT_FAILURE);
+}
+else if(pid==0)
+{
+int j;
+for(j=0;j<10;j++)
+{
+printf("child",j);
+sleep(1);
+}
+_exit(0);
+}
+else
+{
+int i;
+for(i=0;i<10;i++)
+{
+printf("parent %d",i);
+sleep(1);
+}
+exit(0);
+}
+return 0;
+}
+
+

@@ -1,0 +1,44 @@
+//read
+
+#include<unistd.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+#include<sys/shm.h>
+int main()
+{
+	int i;
+	void *shared_memory=(void *)0;
+	char buff[100];
+	int shmid;
+	shmid=shmget((key_t)2345, 1000,0666);
+	shared_memory=shmat(shmid,(void *)0, 0);
+	printf("memory attached\n");
+	printf("you read:%s",shared_memory);
+	shmdt(shared_memory);
+	shmctl(shmid,IPC_RMID,0);  // shared memory deleted
+}
+
+
+
+//write
+#include<unistd.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+#include<sys/shm.h>
+int main()
+{
+	int i;
+	void *shared_memory=(void *)0;
+	char buff[100];
+	int shmid;
+	shmid=shmget((key_t)2345, 1000,0666|IPC_CREAT);//IPC_CREAT creates the shared segment if it does not exist
+	printf("%d\n",shmid);
+	shared_memory=shmat(shmid,NULL, 0); //process attached to shared memory
+	printf("memory attached at \n");
+	read(0,buff,100);
+	strcpy(shared_memory,buff);  //data written from buffer into shared memory
+	printf("you wrote :%s",shared_memory);
+	shmdt(shared_memory);  //process detached from shared memory
+}

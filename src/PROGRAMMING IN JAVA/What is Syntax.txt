@@ -1,0 +1,4 @@
+what is Syntax..??
+Ans: Computers are machines that can interpret your instructions only
+     if you type them in the exact format that the computer expects.
+     This excepted format-that spelling,formating and grammer is called Syntax

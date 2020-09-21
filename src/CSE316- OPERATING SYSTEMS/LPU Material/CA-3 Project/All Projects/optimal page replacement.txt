@@ -1,0 +1,104 @@
+#include<unistd.h>
+002	#include<stdio.h>
+003	int main()
+004	  {
+005	   int tn;
+006	   int fs;
+007	   int cnt;
+008	         int i,j,k,s,ss,pg,zx,max,xc,cv,bn,t,x;
+009	   int pr[20];
+010	   int fm[10];
+011	       int a[10];
+012	 
+013	  printf("Enter number of pages    :   ");
+014	  scanf("%d",&tn);
+015	 
+016	 printf("Enter size of frame  :   ");
+017	  scanf("%d",&fs);
+018	 
+019	 printf("Enter page name :\n");
+020	        for(i=0;i<tn;i++)
+021	  {
+022	   printf("\t");
+023	   scanf("%d",&pr[i]);
+024	  }
+025	 
+026	 
+027	 
+028	 s=0;ss=0;
+029	 
+030	   for(i=0;i<fs;i++)
+031	  {
+032	     fm[i]=-1;
+033	 a[i]=0;
+034	  }
+035	 
+036	  for(i=0;i<tn;i++)
+037	   {
+038	      
+039	  printf("\n page :   %d",pr[i]);
+040	          for(bn=0;bn<fs;bn++) a[bn]=0;
+041	      if(i<fs)
+042	    {
+043	          pg=0;
+044	        for(j=0;j<fs;j++)
+045	     {
+046	         if(fm[j]==pr[i])  pg++;
+047	     }
+048	      if(pg==0)
+049	     {
+050	       fm[s]=pr[i]; s=(s+1)%fs; cnt++;
+051	     }
+052	    }
+053	    else
+054	    {
+055	          pg=0;
+056	           for(j=0;j<fs;j++)
+057	     {
+058	        if(fm[j]==pr[i])  pg++;
+059	     }
+060	     if(pg==0)
+061	     {
+062	  
+063	    for(j=0;j<fs;j++)
+064	      { x=0;
+065	    for(k=i+1;k<tn;k++)
+066	      {
+067	            if(fm[j]==pr[k])
+068	     {
+069	     a[j]=k;
+070	     k=1000; x++;
+071	     }
+072	     if(x==0)
+073	     { a[j]=40;}
+074	     
+075	     }
+076	                              }
+077	      
+078	 
+079	    max=a[0];
+080	    xc=0;
+081	    for(cv=0;cv<fs;cv++)
+082	      {
+083	  
+084	    if(a[cv]>max)
+085	{
+086	        max=a[cv];
+087	 xc=cv;
+088	  }
+089	  }
+090	 fm[xc]=pr[i];
+091	 cnt++;
+092	 ss=(ss+1)%fs;
+093	  }
+094	  }
+095	   printf("\n\t\t\t frame:");
+096	  for(j=0;j<fs;j++)
+097	  {
+098	 if(fm[j]>=0)
+099	   printf("\t%d",fm[j]);
+100	  }
+101	  }
+102	 
+103	  printf("\n page fault :  %d\n",cnt);
+104	  }

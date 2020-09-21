@@ -1,0 +1,68 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int n,i,h,p[10],max,min,fcfs=0,count,flag,scan=0,c_scan=0,sstf=0,visit[10];
+    printf("\n Enter the no of process in disk:");
+    scanf("%d",&n);
+    printf("\n Enter postion of head:");
+    scanf("%d",&h);
+    printf("\n Enter the address of all process:\n");
+    for(i=0;i<n;i++)
+    {
+                    scanf("%d",&p[i]);
+    }
+    //Implementing FCFS
+    fcfs=fcfs+abs(h-p[0]);
+    for(i=1;i<n;i++)
+    {
+                    fcfs+=abs(p[i]-p[i-1]);
+    }
+    printf("\n Movement for FCFS are:%d",fcfs);
+    //Implementing Scan
+    max=p[0];
+    for(i=1;i<n;i++)
+    {
+                    if(p[i]>max)
+                    {
+                                max=p[i];
+                    }
+    }
+    scan=h+max;
+    printf("\n Movement for Scan are:%d",scan);
+    //Implementing C-Scan
+    c_scan=h+100;
+    printf("\n Movement for C-Scan are:%d",c_scan);
+    //Implementing SSTF
+    for(i=0;i<10;i++)
+    {
+                    visit[i]=0;
+    }
+    count=n;
+    while(count>0)
+                    {
+                                min=200;
+                                flag=100;
+                                for(i=0;i<n;i++)
+                                {
+                                   
+                                    if((abs(h-p[i])<min)&&(visit[i]==0))
+                                    {
+                                                       flag=i;
+                                                       min=abs(h-p[flag]);
+                                    }
+                                    
+                                }
+                                
+                                h=p[flag];
+                                printf("\n Current Header:%d",h);
+                                visit[flag]=1;
+                                sstf=sstf+min;
+                                count--;
+                    }
+    
+    printf("\n Movement for SSTF are:%d",sstf);
+    getch();
+    return 0;
+}
+                   

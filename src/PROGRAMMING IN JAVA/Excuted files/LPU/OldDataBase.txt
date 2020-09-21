@@ -1,0 +1,4 @@
+Name: Mittu
+Term: second
+CGPA: 1.0
+Section: 143

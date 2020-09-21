@@ -1,0 +1,4 @@
+Name: charan
+Term: third
+CGPA: 2.0
+Section: 243

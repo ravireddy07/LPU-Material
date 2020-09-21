@@ -1,0 +1,55 @@
+#include <sys/types.h>
+#include <sys/resource.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <math.h>
+void work()
+{
+FILE *f;
+int i;
+double x = 4.5;
+f = tmpfile();
+for(i = 0; i < 10000; i++) {
+fprintf(f,"Do some output\n");
+if(ferror(f)) {
+fprintf(stderr,"Error writing to temporary file\n");
+exit(1);
+}
+}
+int main()
+{
+struct rlimit r_limit;
+getrlimit(RLIMIT_FSIZE, &r_limit);
+printf("Current FSIZE limit: soft = %ld, hard = %ld\n",
+r_limit.rlim_cur, r_limit.rlim_max);
+r_limit.rlim_cur = 2048;
+r_limit.rlim_max = 4096;
+printf("Setting a 2K file size limit\n");
+setrlimit(RLIMIT_FSIZE, &r_limit);
+work();
+exit(0);
+}
+
+
+
+#include < setjmp.h >
+
+		main()
+		{
+ 			 jmp_buf env;
+ 			 int i;
+
+  			i = setjmp(env);
+ 			 printf("i = %d\n", i);
+
+ 			 if (i != 0) 
+                                     exit(0);
+
+  			longjmp(env, 2);
+ 			 printf("Does this line get printed?\n");
+
+		}
+
+
+

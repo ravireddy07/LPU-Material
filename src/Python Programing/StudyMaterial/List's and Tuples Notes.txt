@@ -1,0 +1,16 @@
+List's:-
+
+   -> lists are Mutable
+   -> A List is Created by using Brakets[].
+   -> We can perform insertion,deletion,updation on lists.
+   -> lists will take more size on computer than tuples
+   -> lists will take more time to create a huge list compared to tuple.
+
+
+Tuple's:-
+
+   -> Tuples are Immutable.
+   -> A Tuple is Created by Using Paranthesis().
+   -> we cannot perform insertion,deletion,updation on Tuples.
+   -> Tuples will take less size on computer than Lists.
+   -> Tuple will take Less time to create a huge Tuple compared to Lists.

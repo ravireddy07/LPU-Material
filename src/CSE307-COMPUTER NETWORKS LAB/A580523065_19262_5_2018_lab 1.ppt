@@ -1,0 +1,1156 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><title>
+	Student Download Assignments
+</title>
+    <style>
+.bx-controls-direction{display:none;}
+</style>
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="js/jquery-ui.css" />
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+    <noscript>
+<div style="position: fixed; top: 0px; left: 0px; z-index: 3000;height: 100%; width: 100%; background-color: rgba(0,0,0,.6);padding-top:15%;text-align: center;font-family: Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana,' sans-serif';font-size: 20px;">
+  <div style="display: inline-block;background-color:  rgba(255,255,255,.7);padding: 45px;-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;"> <img src="login_images/ums_logo.png" alt=""/>
+    <hr style="border: solid 1px #ACACAC">
+    <p style="margin-left: 10px">JavaScript of your browser is not enabled.please enable it first to access UMS</p>
+    <p style="margin-left: 10px">How to enable Javascript : visit this link to step by step help </p>
+    <p style="margin-left: 10px"><a href="http://activatejavascript.org/en/instructions" style="background-color: #337ab7;border-bottom-color: #2e6da4;border-left-color: #2e6da4;border-right-color: #2e6da4;border-top-color: #2e6da4;color: #fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding: 5px 10px;text-decoration: none"> Click Here </a> </p>
+  </div>
+</div>
+</noscript>  
+
+    <style type="text/css">
+    .RadComboBoxDropDown .rcbItem > label, .RadComboBoxDropDown .rcbHovered > label, .RadComboBoxDropDown .rcbDisabled > label, .RadComboBoxDropDown .rcbLoading > label, .RadComboBoxDropDown .rcbCheckAllItems > label, .RadComboBoxDropDown .rcbCheckAllItemsHovered > label {
+    display:inline-block !important;
+    }
+   </style>
+
+    <link href="css/tabcontent.css" rel="stylesheet" type="text/css" /><link href="css/student_ums_style.css" rel="stylesheet" type="text/css" /><link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <!--bxslider start-->
+     <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.bxslider.min.js" type="text/javascript"></script>
+    <!--bxslider end-->
+
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+     
+    <script src="js/jquery.slimscroll.min.js" type="text/javascript"></script>
+   <script>
+    $(document).ready(function(){
+       $('.slider').bxSlider({
+  auto: true,
+  autoControls: false,
+  autoHover: true,
+  stopAutoOnClick: false,
+  pager: true,
+  });
+    });
+  </script> 
+
+
+    <style type="text/css">
+        .RadMenu_Sunset .rmRootGroup {
+            border: none;
+        }
+
+
+
+        .ui-dialog {
+            position: fixed !important;
+            z-index: 90;
+            top: 100px !important;
+        }
+
+            .ui-dialog .dialog-height {
+                height: auto !important;
+            }
+
+            .ui-dialog .ui-dialog-titlebar-close span {
+                background-image: url(Images/red_cross_icon.gif) !important;
+                background-repeat: no-repeat;
+            }
+            /* for Modal css*/
+        .ui-widget-overlay {
+            position: fixed;
+              opacity:0.8 !important;
+        }
+
+        .ui-front {
+            z-index: 1000;
+        }
+
+        .no-close .ui-dialog-titlebar-close {
+            display: none;
+        }
+        .disableClosedDialog
+        {
+             margin-left: 10px; 
+             background-color: none;
+             color: lightgray;
+             padding: 3px; 
+             cursor: default;
+             font-weight:normal;
+        }
+        .enableClosedialog
+        {
+             margin-left: 10px; 
+             background-color: lightgreen;
+             color: black;
+             padding: 3px; 
+             cursor: pointer;
+             font-weight:bold;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#owl-demo").owlCarousel({
+
+                navigation: true,
+                slideSpeed: 500,
+                paginationSpeed: 400,
+                singleItem: true,
+                autoPlay: 5000,
+                stopOnHover: true,
+
+                navigationText: ["&larr;", "&rarr;"],
+                // "singleItem:true" is a shortcut for:
+                // items : 1, 
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+
+            });
+            $("#owl-demo2").owlCarousel({
+
+                navigation: true,
+                slideSpeed: 500,
+                paginationSpeed: 400,
+                singleItem: true,
+                autoPlay: 4000,
+                stopOnHover: true,
+
+                navigationText: ["&larr;", "&rarr;"],
+                // "singleItem:true" is a shortcut for:
+                // items : 1, 
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+
+            });
+
+            $("#owl-demo3").owlCarousel({
+
+                navigation: true,
+                slideSpeed: 500,
+                paginationSpeed: 400,
+                singleItem: true,
+                autoPlay: 4000,
+                stopOnHover: true,
+
+                navigationText: ["&larr;", "&rarr;"],
+                // "singleItem:true" is a shortcut for:
+                // items : 1, 
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+
+            });
+
+
+
+        });
+        var $buoop = {}
+        $buoop.ol = window.onload;
+        window.onload = function () {
+            try { if ($buoop.ol) $buoop.ol(); } catch (e) { }
+            var e = document.createElement("script");
+            e.setAttribute("type", "text/javascript");
+            e.setAttribute("src", "https://browser-update.org/update.js");
+            document.body.appendChild(e);
+        }
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-67701680-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+<link href="App_Themes/orange/StyleSheet1.css" type="text/css" rel="stylesheet" /><link href="/LpuUms/WebResource.axd?d=hcXDZhXiidgsQUtEo5iT3-k_2R2EleMqco6Deqmm5htEzvug8XImGZjEhuTmOdjznvVLpojEXBVqKSFmAC0tUee_zX4HV-QXhBKOckDX9qQKH59eXuScDQ9OGtNDTszVPDPkfoAwQjpE5uAME5cX_UA0S3PkLUVdT0KNs7NNRvo1&amp;t=636499880530278526" type="text/css" rel="stylesheet" /><link href="/LpuUms/WebResource.axd?d=vsKpXOsoEwDUfVug9KOqSoRDrvdqoY00Bor5XXMNysMdQrSbX18TwaKTbajlpwImvJLErZizzkfcOFPRyCrAltNaINxIK9jdK7QshwULF3RrfRTpB0wiJOsxVy89kiTq0&amp;t=636499880585279585" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/LpuUms/WebResource.axd?d=gGPJcKA2egeNvbDi_oMTrT_DmiFEhK0my5kML1sovmnUbNeAKiFG5UV8GjJsJg9qKJ_BRCChhzSlIpCwrOZ8hf0b9xLVWAp2Nu7hojHwUtYD_KDCE88r9uCcv9HsxmiZSghNLVg4tVZcElYFIeLCFQ2&amp;t=636499880585279585" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+<body>
+    <form method="post" action="./frmstudentdownloadassignment.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl00_RadScriptManager1_TSM" id="ctl00_RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VSTATE" id="__VSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/LpuUms/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZCUiOM4dhk24dk9AWi_2JgUqOK2EiTlYMzCEY9X3JfHuoP6sDJWUH3uTysSjaPFXBg2&amp;t=636396446620000000" type="text/javascript"></script>
+
+
+<script src="/LpuUms/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1KlxkAbfGR5GyPlMgpPmwpjS8i939GQ68-AZtePV1Wi0hRYiuSiSicsybrdt05AEZjUprtmir5umoWDguysAqoRgUeUx9zVwguxEwLXtJj1mPWRtI_0iFgu4dxlfCqGCWA2&amp;t=38c11c4b" type="text/javascript"></script>
+<script src="/LpuUms/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl00_RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a3542601e-9c1f-4a5f-b344-e01a858e4b49%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2016.1.113.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3acb3d1a3e-7303-48dc-a612-61700f912203%3a16e4e7cd%3af7645509%3a24ee1bba%3ae330518b%3a2003d0b8%3ac128760b%3a88144a7a%3a1e771326%3ac8618e41%3a1a73651d%3a333f8d94%3bAjaxControlToolkit%2c+Version%3d17.1.1.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3aca39a345-a86e-4c56-85db-a9a248b386f1%3acd9be5ef%3af2800037%3a2761bb61%3adffb332%3a4380ed18" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+null;if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Sr34wt1wi+pa5Qgun7I3A/sdJJbib4G9jBLVY7J0/jsc2weTLUo/psVe5aQ5oUINSdXXdykihwd7YvOlJ/UKN4tFbTWYhB8HAmi+/6YhVWYoKgcGsRcMnldYNk0P1EiRTCww3QF/XcKF9Kv9hAZ8GLgs4qI89ofkukMdH9ZvXtRuE3C9VtMQcHovkBSsK+bqHcyYadMVA6FRakUqeTEFAwrMnwCItU2bVbkzqBEWvMOdW7ANJyllDr8yFs/UFUQe+eV+47TP8bZ8QOvZlUCTwk2azhFq5urCG6QxiSIIRYwKG5AKTm4GR3gjLnEhLFhl/UZ9PBIwuIlWTdU2CcItpWbpNvi5jFZHTHpt799BcLVK+uWCITh7Su7GbmVAC9yRLQhFMpUG/uB7tw/SzSvYlolp7X69N2xiBz0GVJAaiA0KaXcjSMqmPsjCEoU7IW427BNWRoHuD2Nk3yGrLIn308T/KE0FCvuT+OKDyUjgOaAzFvtdb9xp1kts14ThCY0ma6gysYDDWcW7WMGVnKtEsBaKvpByHa90SwmPMbg/fV4AxJYEJZ3KGCQ0uG4kKEegX4rkgqRG7ax0dfPucahF6kidEyXfGvLr7uZJ1w/XyfTwPtC7pSozzdoSFTkorhHQeOpnvK4v/r2hAp/j1T7La4iKW/FO2iFsRqetZniRdgyoyhr/ANHVXCJzA/l3xV934sSF4JmFRaNeM/8q8lo2W0lBU1zzRPVDe5oyESw34Hnn8xcr2tyH0DLntqZCIHWc3LW72aASa+EcQtQCTAFO6nhosB3pS3sedt86CF/WSJFOKDAJFDfME7TJef5S2+jCKHKHetZtqykNz7Ky27mf7C6ruqRSAw01IjqSS6gmSWEh/R4UxbeQeXj4rC3slxb5uvC6F1N2fadwDLjus5KcJprPME+r0oX/0qQp0KAo8yAyk3yTvZTycPRJdHNnPYcp" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'aspnetForm', ['tctl00$WcHeaderforStudent1$WUCStudentIdea1$UpdatePanel1',''], [], ['ctl00$WcHeaderforStudent1$WUCStudentIdea1$rdStatus',''], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <script type="text/javascript">
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_initializeRequest(InitializeRequest);
+            function InitializeRequest(sender, args) {
+                if (prm.get_isInAsyncPostBack()) {
+                    args.set_cancel(true);
+                }
+            }
+        </script>
+
+        <div id="main_page" class="main_page">
+            <div id="wrap">
+                <div id="content">
+                    
+<style type="text/css">
+    .RadMenu_Sunset .rmRootGroup
+    {
+        border: none;
+    }
+    .RadMenu_Default .rmRootGroup
+    {
+        border: none;
+    }
+    .RadMenu_Hay .rmRootGroup
+    {
+        border: none;
+    }
+    .rmRootScrollGroup
+    {
+        width: 339px !important;
+    }
+</style>
+<div id="ctl00_WcHeaderforStudent1_UpdateProgress1" style="display:none;">
+	
+        <img src="DesignImages/wait_anim.gif" alt='' />
+    
+</div>
+<div id="header">
+    <a href="#" class="logo">
+        <img src="imgs/logo.png" width="224" height="131" alt="Logo" /></a>
+    <div class="header_right">
+        <div class="header_right_top">
+            <img class="ums_logo" src="imgs/ums.png" width="275" height="58" />
+            <div class="quick_links">
+                <ul>
+                    <li>
+                        <a id="ctl00_WcHeaderforStudent1_blue" title="Blue" class="aspLinkButton" href="javascript:__doPostBack(&#39;ctl00$WcHeaderforStudent1$blue&#39;,&#39;&#39;)"><img src="imgs/blue_icon.png" width="11" height="11" border="0" /></a></li>
+                    <li>
+                        <a id="ctl00_WcHeaderforStudent1_green" title="Green" class="aspLinkButton" href="javascript:__doPostBack(&#39;ctl00$WcHeaderforStudent1$green&#39;,&#39;&#39;)"><img src="imgs/green_icon.png" width="11" height="11" border="0" /> </a></li>
+                    <li>
+                        <a id="ctl00_WcHeaderforStudent1_orange" title="Orange" class="aspLinkButton" href="javascript:__doPostBack(&#39;ctl00$WcHeaderforStudent1$orange&#39;,&#39;&#39;)"><img src="imgs/orange_icon.png" width="11" height="11" border="0" /></a></li>
+                    <li>
+                        <a id="ctl00_WcHeaderforStudent1_purple" title="Purple" class="aspLinkButton" href="javascript:__doPostBack(&#39;ctl00$WcHeaderforStudent1$purple&#39;,&#39;&#39;)"><img src="imgs/purple_icon.png" width="11" height="11" border="0" /></a></li>
+                    <li>
+                        <a id="ctl00_WcHeaderforStudent1_red" title="Red" class="aspLinkButton" href="javascript:__doPostBack(&#39;ctl00$WcHeaderforStudent1$red&#39;,&#39;&#39;)"><img src="imgs/red_icon.png" width="11" height="11" border="0" /></a></li>
+                    <li>
+                        <a id="ctl00_WcHeaderforStudent1_brown" title="Brown" class="aspLinkButton" href="javascript:__doPostBack(&#39;ctl00$WcHeaderforStudent1$brown&#39;,&#39;&#39;)"><img src="imgs/brown_icon.png" width="11" height="11" border="0"/></a></li>
+                    <li>
+                        <a id="ctl00_WcHeaderforStudent1_sky" title="Sky" class="aspLinkButton" href="javascript:__doPostBack(&#39;ctl00$WcHeaderforStudent1$sky&#39;,&#39;&#39;)"><img src="imgs/sky_icon.png" width="11" height="11" border="0"/></a></li>
+                    <li>
+                        <a id="ctl00_WcHeaderforStudent1_pink" title="Pink" class="aspLinkButton" href="javascript:__doPostBack(&#39;ctl00$WcHeaderforStudent1$pink&#39;,&#39;&#39;)"><img src="imgs/pink_icon.png" width="11" height="11" border="0"/></a></li>
+                    <li>
+                        <a id="ctl00_WcHeaderforStudent1_violet" title="Violet" class="aspLinkButton" href="javascript:__doPostBack(&#39;ctl00$WcHeaderforStudent1$violet&#39;,&#39;&#39;)"><img src="imgs/violet_icon.png" width="11" height="11" border="0"/></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_right_bottom">
+            <div class="nav_left">
+                
+                <input type="hidden" name="ctl00$WcHeaderforStudent1$hdnType" id="ctl00_WcHeaderforStudent1_hdnType" value="S" />
+                <div id="ctl00_WcHeaderforStudent1_radStudentMenu" class="RadMenu RadMenu_Default rmSized" style="width:100%;top: 1px; left: 0px">
+	<!-- 2016.1.113.45 --><div class="rmScrollWrap rmRootGroup rmHorizontal" style="width:100%;">
+		<ul class="rmRootScrollGroup">
+			<li class="rmItem rmFirst"><a class="rmLink rmRootLink" href="#"><span class="rmText">UMS Navigation</span></a><div class="rmSlide">
+				<ul class="rmVertical rmGroup rmLevel1">
+					<li class="rmItem rmFirst"><a class="rmLink" href="#"><span class="rmText">Central Mail System</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmCentralMailReceived.aspx"><span class="rmText">Central Mail Receiving</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmCentralMailTracking.aspx"><span class="rmText">Tracking Incoming Mail</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Examination</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="#"><span class="rmText">Backlog Registration
+</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmSummerTermCoursePreference.aspx"><span class="rmText">Backlog Course Preference</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmStudentBacklogEntry.aspx"><span class="rmText">Backlog Course Registration</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="frmExternalCertificates.aspx"><span class="rmText">Certificate Request</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentExamAttendanceDisplay.aspx"><span class="rmText">Exam Attendance</span></a></li><li class="rmItem "><a class="rmLink" href="frmSeatingPlan.aspx"><span class="rmText">Examination Seating Plan</span></a></li><li class="rmItem "><a class="rmLink" href="frmDispalyOmrSheetlink.aspx"><span class="rmText">OMR Sheet Scrutiny</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentPaidTransaction.aspx"><span class="rmText">Online Transactions</span></a></li><li class="rmItem "><a class="rmLink" href="frmProvisionalAdmitCard.aspx"><span class="rmText">Provisional Admit Card</span></a></li><li class="rmItem "><a class="rmLink" href="frmProvisionalDMCRequest.aspx"><span class="rmText">Provisional DMC Request</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Re-Appear Registration</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmreappearfeereceipt.aspx"><span class="rmText">Fee Receipt</span></a></li><li class="rmItem "><a class="rmLink" href="frmExamRegisteration.aspx"><span class="rmText">Registration Form</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmExamRegisterationAfterDate.aspx"><span class="rmText">Registration Form with Date Sheet</span></a></li>
+								</ul>
+							</div></li><li class="rmItem rmLast"><a class="rmLink" href="#"><span class="rmText">Summer Term</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmSummerTermDeregistration.aspx"><span class="rmText">Summer Term Course De-Registration</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmSummerTermRegisteration.aspx"><span class="rmText">Summer Term Course Registration</span></a></li>
+								</ul>
+							</div></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Feedback & Surveys</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmStudentSurveyForScheme.aspx"><span class="rmText">Feedback for Program Scheme and Courses</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentSurvey.aspx"><span class="rmText">Feedback For Teacher/Mentor/AO/Heads</span></a></li><li class="rmItem "><a class="rmLink" href="frmGuestLectureStudentFeedbackMaster.aspx"><span class="rmText">Guest Lecture Feedback</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmSurveyTerms.aspx"><span class="rmText">Online Survey</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Finance Management System (FMS)</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmStudentBankInformation.aspx"><span class="rmText">Bank Account Confirmation</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentAccountsCertificates.aspx"><span class="rmText">Certificates</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/SCHOALR%20CARDICAH%20CARD.pdf"><span class="rmText">Compound Fee via Scholar Card</span></a></li><li class="rmItem "><a class="rmLink" href="frmDepositFeeDetail.aspx"><span class="rmText">Confirmation of Online Fee Deposit</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/FEE_DEPOSIT_GUIDELINE2017.rar"><span class="rmText">Fee Deposit Guideline</span></a></li><li class="rmItem "><a class="rmLink" href="Reports/frmStudentFeeReceipt.aspx"><span class="rmText">Fee Receipts</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Fee Structure </span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="Static%20Information/FEE_Notification_INR2017.rar"><span class="rmText">Fee structure for Indian student</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="Static%20Information/FEE_Notification_USD2017.rar"><span class="rmText">Fee structure for International Student in US dollar</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="Static%20Information/INFORMATION%20BROCHURE..pdf"><span class="rmText">Information Brochure</span></a></li><li class="rmItem "><a class="rmLink" href="Reports/frmStatementofAccounts.aspx"><span class="rmText">My Fee Status</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/ReimbursementUnderTakingnew.pdf"><span class="rmText">Reimbursement UnderTaking Form</span></a></li><li class="rmItem "><a class="rmLink" href="frmAccountsRequestMaster.aspx"><span class="rmText">Reimbursement, Fee Extension, Loan Letter & Tution Fee Certificates</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmStudentTokenAllotment.aspx"><span class="rmText">Token Allotment</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Health Services</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst rmLast"><a class="rmLink" href="frmDoctorAppointmnt.aspx"><span class="rmText">Doctor Appointment</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Learning Management System (LMS)</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmCourseSyllabus.aspx"><span class="rmText">Academic Course Syllabus</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Assignment</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmstudentdownloadassignment.aspx"><span class="rmText">Assignment Download</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmstudentassignmentupload.aspx"><span class="rmText">Assignment Upload</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="frmCRQuestionnaire.aspx"><span class="rmText">CR Nomination</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentElectiveCoursePolling.aspx"><span class="rmText">DE/SP Polling</span></a></li><li class="rmItem "><a class="rmLink" href="frmEngineeringElectivePolling.aspx"><span class="rmText">Engineering Minor Polling</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentEventsDutyLeave.aspx"><span class="rmText">Event Duty Leaves</span></a></li><li class="rmItem "><a class="rmLink" href="frmCourseIp.aspx"><span class="rmText">Instruction Plans</span></a></li><li class="rmItem "><a class="rmLink" href="frmCourseLm.aspx"><span class="rmText">Lab Manuals</span></a></li><li class="rmItem "><a class="rmLink" href="http://172.19.2.6:8580/webopac/html/searchform"><span class="rmText">Library Search</span></a></li><li class="rmItem "><a class="rmLink" href="frmViewStudentMakeupAdjusment.aspx"><span class="rmText">MakeUp and Adjustment Details</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Minor Elective</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmMinorElectivePolling.aspx"><span class="rmText">Polling</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmApplicableMinorElective.aspx"><span class="rmText">View Applicable Areas</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="frmMinorAreaPrefrence.aspx"><span class="rmText">Open Minor Elective Area Preference</span></a></li><li class="rmItem "><a class="rmLink" href="frmOESSECoursePrefrence.aspx"><span class="rmText">Open/Social Sci. Elective Course Preference</span></a></li><li class="rmItem "><a class="rmLink" href="frmOeRegistration.aspx"><span class="rmText">Open/Social Sci. Elective Registration</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Practical</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst rmLast"><a class="rmLink" href="frmStudentUploadPractical.aspx"><span class="rmText">Practical Upload</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="Reports/frmSchemeReportforInternalCirculation.aspx"><span class="rmText">Program Scheme</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Project</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst rmLast"><a class="rmLink" href="frmCapStudentListfaculty.aspx"><span class="rmText">Project /Dissertation Supervisor Information</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="frmCapstoneStudentAttendanceView.aspx"><span class="rmText">Project-Dissertation Attendance View</span></a></li><li class="rmItem "><a class="rmLink" href="frmCapstoneStudentViewMarks.aspx"><span class="rmText">Project-Dissertation Marks View</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentDutyDetail.aspx"><span class="rmText">Request for Duty Leave</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentCreditTransferUndertaking.aspx"><span class="rmText">Undertaking for Credit Transfer Option</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentTrainingExitContinueOptions.aspx"><span class="rmText">Undertaking Format for Option Taking</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentUploadCapstoneProject.aspx"><span class="rmText">Upload Research Project</span></a></li><li class="rmItem "><a class="rmLink" href="Reports/rptCourseWiseStudentAttendance.aspx"><span class="rmText">View Attendance</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">View Result</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmStudentResultDisplay.aspx"><span class="rmText">View Grades</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmMarksView.aspx"><span class="rmText">View Marks</span></a></li>
+								</ul>
+							</div></li><li class="rmItem rmLast"><a class="rmLink" href="Reports/frmStudentTimeTable.aspx"><span class="rmText">View Time Table</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Library Management System</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmStudentPDFView.aspx"><span class="rmText">Dissertation/Thesis</span></a></li><li class="rmItem "><a class="rmLink" href="http://112.196.62.20/login"><span class="rmText">E-Resources</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="http://172.19.2.6:8580/webopac/html/searchform"><span class="rmText">Library Search</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">My Profile</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst rmLast"><a class="rmLink" href="frmStudentProfileUpdate.aspx"><span class="rmText">Profile Update</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="http://lpuonline.in/eduonline"><span class="rmText">Online Courses (Use UMS ID & Password)</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Placement Services</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmPlacementStudentShare.aspx"><span class="rmText">Placement Document Repository</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentSessionRegistration.aspx"><span class="rmText">Placement Event Registration</span></a></li><li class="rmItem "><a class="rmLink" href="frmPlacementPortalRegistration.aspx"><span class="rmText">Placement Policy Registration</span></a></li><li class="rmItem "><a class="rmLink" href="frmPlacementHome.aspx"><span class="rmText">Placement Portal</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Placement Question Bank</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmStudentPlacmentIQBankAdd.aspx"><span class="rmText">Add Questions</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmStudentPlacmentIQBank.aspx"><span class="rmText">View Question Bank</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Student Body</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst rmLast"><a class="rmLink" href="Static%20Information/SPCPolicy.pdf"><span class="rmText">Student Placement Coordinator Policy</span></a></li>
+								</ul>
+							</div></li><li class="rmItem rmLast"><a class="rmLink" href="frmSummerInternshipRegistration.aspx"><span class="rmText">Summer Internship Registration</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="frmPressReleaseRequestByStudent.aspx"><span class="rmText">Press Release Request</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Relationship Management System (RMS)</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmMtsMessage.aspx"><span class="rmText">Log Request</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmMtsUserHome.aspx"><span class="rmText">View Request Status</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Research & Development</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmResearchAnnualSeminarRegister.aspx"><span class="rmText">Annual Seminar Registration Form</span></a></li><li class="rmItem "><a class="rmLink" href="frmResearchDipStudent.aspx"><span class="rmText">IPR Idea Request</span></a></li><li class="rmItem "><a class="rmLink" href="frmPhdScholarActivityDetail.aspx"><span class="rmText">Ph.D Scholar Activity Detail</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Research Proposal For Internal Funding</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst rmLast"><a class="rmLink" href="#"><span class="rmText">Transaction</span></a></li>
+								</ul>
+							</div></li><li class="rmItem rmLast"><a class="rmLink" href="frmResearchSotaRegister.aspx"><span class="rmText">SOTA Registration Form</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Residential & Vendor Services</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmViewHostelElectricityUnitDetails.aspx"><span class="rmText">Electricity Consumption View</span></a></li><li class="rmItem "><a class="rmLink" href="frmHostelCloakRoomApplication.aspx"><span class="rmText">Hostel Cloak Room Application</span></a></li><li class="rmItem "><a class="rmLink" href="frmHostelConfiscationItemAcknowledgement.aspx"><span class="rmText">Hostel Confiscation Item Acknowledgement</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentHostelLeaveApplication.aspx"><span class="rmText">Hostel Leave Application</span></a></li><li class="rmItem "><a class="rmLink" href="frmHostelMailAcknowledgeByStudent.aspx"><span class="rmText">Hostel Mail Acknowledgement</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Mess Card</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmNoFood.aspx"><span class="rmText">Cancellation of Food</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmLostCardRequest.aspx"><span class="rmText">Card Block Request</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="frmInternationalStudentsResidence.aspx"><span class="rmText">Resident details</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Residential Booking</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmHostelPollingRefundForm.aspx"><span class="rmText">Apply Hostel Cancellation/Refund Form</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentHostelChangeFoodPeriod.aspx"><span class="rmText">Availing Food/Laundry Facility</span></a></li><li class="rmItem "><a class="rmLink" href="frmHostelSwap.aspx"><span class="rmText">Hostel Mutual shifting</span></a></li><li class="rmItem "><a class="rmLink" href="frmHostelSeaterChangePreference.aspx"><span class="rmText">Hostel/Aptt. Seater Change Request</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentHostelBookingWaitList.aspx"><span class="rmText">Not opting any seat</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentHostelBooking.aspx"><span class="rmText">Online Residential Booking</span></a></li><li class="rmItem "><a class="rmLink" href="frmHostelPollingAfterBooking.aspx"><span class="rmText">Online Residential Booking for Term-II</span></a></li><li class="rmItem "><a class="rmLink" href="frmHostelPreferenceForPEP.aspx"><span class="rmText">PEP Hostel Booking</span></a></li><li class="rmItem "><a class="rmLink" href="frmMakeICashPaymentForHostelPolling.aspx"><span class="rmText">Registration for online residential booking</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmSummerTermHostelBooking.aspx"><span class="rmText">Summer Vacation Hostel Booking</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Transport Management System</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="frmVehicleTracker.aspx"><span class="rmText">Live Status of vehicle</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmStudentTransportPreference.aspx"><span class="rmText">Transport Preference</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="frmHostelDeallocationActionTakenByStudent.aspx"><span class="rmText">Undertaking for seat cancellation</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmCampusItemSearch.aspx"><span class="rmText">Vendor Services Search</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Security & Safety</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmVisitorGatePassStudentRequest.aspx"><span class="rmText">Online Sponsored Parent Pass</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmStudentRFIDPassFormWithICash.aspx"><span class="rmText">RFID Application Form</span></a></li>
+						</ul>
+					</div></li><li class="rmItem rmLast"><a class="rmLink" href="#"><span class="rmText">Student Welfare</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="frmStudentClubRegisteration.aspx"><span class="rmText">Activity Registration</span></a></li><li class="rmItem "><a class="rmLink" href="frmSportsClubStudentAttendance.aspx"><span class="rmText">Club Attendance View</span></a></li><li class="rmItem "><a class="rmLink" href="frmdlStudentEventRegister.aspx"><span class="rmText">Event Registration</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentInventoryDistributionReport.aspx"><span class="rmText">My Inventory Record</span></a></li><li class="rmItem "><a class="rmLink" href="frmDSAStudentsEventRegistration.aspx"><span class="rmText">Online Student Registration</span></a></li><li class="rmItem "><a class="rmLink" href="frmStudentRegisterPartTimejobReport.aspx"><span class="rmText">Part-Time Job Detail</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="frmDSAStudentPolicyView.aspx"><span class="rmText">Policies</span></a></li>
+						</ul>
+					</div></li>
+				</ul>
+			</div></li><li class="rmItem "><a class="rmLink rmRootLink" href="#"><span class="rmText">Important Links</span></a><div class="rmSlide">
+				<ul class="rmVertical rmGroup rmLevel1">
+					<li class="rmItem rmFirst"><a class="rmLink" href="#"><span class="rmText">Academic Calendar</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="Static%20Information/Academic%20calender/AcademicCalendarsPh.DProgrammesFullandparttimeforSpringTermSession1718.pdf"><span class="rmText">All Ph.D Programmes Full and part time for Spring Term (2017-18)</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/Academic_Calendar_for_Autumn_Term_of_Academic_Session_2017-18_for_B._Pharmacy_and_M_Pharmacy_Programmes.pdf"><span class="rmText">Autumn Term of Academic Session 2017-18 for B. Pharmacy and M Pharmacy Programmes</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/AcademicCalendars-FullTimeProgrammesforAutumnTermSession1718.pdf"><span class="rmText">Full time programmes (2017-18)</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/Academic_Calendars_for_all_Full_Time_Programmes_offered_in_School_of_BPT_and_MPT_for_Autumn_Term_(Session_2017-18).pdf"><span class="rmText">Full Time Programmes - BPT and MPT for Autumn Term (2017-18)</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/Academic_Calendars_For_all_Full_Time_Programmes_offered_in_School_of_Physical_Education_for_Autumn_Term_(Session_2017-18).pdf"><span class="rmText">Full Time Programmes - School of Physical Education for Autumn Term (2017-18)</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/Academic_Calendars_FullTime_Programmes_for_SpringTermSession2017-18.pdf"><span class="rmText">Full Time Programmes for Spring Term Session 17-18</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/AcademicCalendarsforallFullTimeProgrammesofferedinSchoolofEducationforSpringTerm(Session2017-18).pdf"><span class="rmText">Full Time Programmes in School of Education Spring-Term(Session2017-18)</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/AcademicCalendarsforallFullTimeProgrammesofferedinSchoolofLawforSpringTerm(Session2017-18).pdf"><span class="rmText">Full Time Programmes in School of Law Spring-Term(Session2017-18)</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/AcademicCalendarforSpringTermofAcademicSession2017-18forallFullTimeprogrammesofferedinSchoolofPhysicalEducation.pdf"><span class="rmText">FullTime Programmes in School of Physical Education Spring-Term(Session2017-18)</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/AC_MASTERSOFPHYSIOTHERAPY16161.pdf"><span class="rmText">Masters of Physiotherapy for Term 16161</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/Academic_Calendars_for_all_Part_Time_Programmes_for_Autumn_Term_(Session_2017-18).pdf"><span class="rmText">Part Time Programmes for Autumn Term (2017-18)</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="Static%20Information/Academic%20calender/AcademicCalendarforSpringTerm201718PartTimeprogrammes.pdf"><span class="rmText">Part Time Programmes for Autumn Term (2017-18)</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="frmDuplicateIdCardApplicationForm.aspx"><span class="rmText">Apply Duplicate Id/Transport Card</span></a></li><li class="rmItem "><a class="rmLink" href="frmTurnStileAppointmentDetails.aspx"><span class="rmText">Appointment System (Manpower Access Facilitation Cell)</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Btech CSE</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="Static%20Information/CSE/SCSE%20Induction%20Presentation%202016-Day1-1Aug.pdf"><span class="rmText">Induction Presentation Day I</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/CSE/SCSE%20Induction%20Presentation%202016-Day%202.pdf"><span class="rmText">Induction Presentation Day II</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="Static%20Information/CSE/Student%20Self%20Development%20Roadmap%20B.Tech%20CSEIT.pdf"><span class="rmText">Self Development RoadMap</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Capstone Dissertation Internships</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="Static%20Information/External%20CA%20format%20for%20Internship.pdf"><span class="rmText">External CA format for Internship</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Guidelines_for_Inviting_External_Examiners_for_Dissertation_Evaluations_Excluding_M.Phil_PhD.pdf"><span class="rmText">Guidelines - Inviting External Examiners for Dissertation Evaluations Excluding M.Phil PhD</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Guidelines%20for%20Dissertation%20for%20Master%20Degree%20Programs%20Except%20for%20M.Phil.%20Programs%20Applicable%20to%20Academic%20Session%202014-15.pdf"><span class="rmText">Guidelines-Dissertation for Master Degree Prg. except for M.Phil. programs(14-15)</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Guidelines%20for%20Project%20Courses%20Including%20Capstone%20%20For%20Academic%20Session%202014-15.pdf"><span class="rmText">Guidelines-Project Courses including Capstone(Sess. 14-15)</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="Static%20Information/Evaluation%20Guidelines%20and%20Timeline%20for%20Dessertation-I.pdf"><span class="rmText">Guidlines for MPhil Dissertation</span></a></li>
+						</ul>
+					</div></li><li class="rmItem "><a class="rmLink" href="frmFormatsStudents.aspx"><span class="rmText">Download Formats</span></a></li><li class="rmItem "><a class="rmLink" href="Emergency_Hotline_Numbers.html"><span class="rmText">Emergency Contact Numbers</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/MTE%20ETE%20Examination%20Pattern.pdf"><span class="rmText">Examination Pattern</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Academic%20calender/GUIDELINES%20FOR%20TAKING%20OPTION%20FROM%20STUDENTS%20ADMITTED%20IN%20DUAL%20DEGREE%20PROGRAMMES%20FOR%20CONTINUING%20OR%20DISCONTINUING%20THE%20PURSUANCE%20OF%20HIGHER%20DEGREE.pdf"><span class="rmText">Guidelines of Option Taking</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Siteplan16.jpg"><span class="rmText">Induction/University Map</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Interaction%20Timings%20with%20Higher%20Authorities.pdf"><span class="rmText">Interaction Timings with Higher Authorities</span></a></li><li class="rmItem "><a class="rmLink" href="frmLostAndFoundReport.aspx"><span class="rmText">Lost and Found Report</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/DoctorList.htm"><span class="rmText">Medical Staff at Uni Hospital</span></a></li><li class="rmItem "><a class="rmLink" href="frmstudentaccommodationdetails.aspx"><span class="rmText">PG/Private/Rented Accommodation Details</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Policies & Rules</span></a><div class="rmSlide">
+						<ul class="rmVertical rmGroup rmLevel2">
+							<li class="rmItem rmFirst"><a class="rmLink" href="#"><span class="rmText">Academic and Examination Rules</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst rmLast"><a class="rmLink" href="Static%20Information/Academic%20calender/An%20Extract%20of%20changes%20in%20rules%20w%20e%20f%20Session%202013-14.pdf"><span class="rmText">An Extract of changes in rules w e f Session 2013-14.</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Awards & Scholarships</span></a><div class="rmSlide">
+								<ul class="rmVertical rmGroup rmLevel3">
+									<li class="rmItem rmFirst"><a class="rmLink" href="Policy/StudentFee/S.No.%205.pdf"><span class="rmText">Academic Honour To Regular Students</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="Policy/StudentFee/S.No.%206.pdf"><span class="rmText">Scholarship to Regular Students</span></a></li>
+								</ul>
+							</div></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Guidelines_for_Issuance_of_requipments_from_School%20of_Journalism_,Film_and_Creative_Arts.pdf"><span class="rmText">Guidelines for Issuance of equipment from School of Journalism, Film and Creative Arts</span></a></li><li class="rmItem "><a class="rmLink" href="Static%20Information/Library%20Policy.pdf"><span class="rmText">Library Policy</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="Static%20Information/Policy%20for%20International%20Students.pdf"><span class="rmText">Policy for International Students</span></a></li>
+						</ul>
+					</div></li><li class="rmItem rmLast"><a class="rmLink" href="frmGrievanceRequestMaster.aspx"><span class="rmText">Post Request for Appointment</span></a></li>
+				</ul>
+			</div></li><li class="rmItem rmLast"><a class="rmLink rmRootLink" href="#"><span class="rmText">Change Password</span></a><div class="rmSlide">
+				<ul class="rmVertical rmGroup rmLevel1">
+					<li class="rmItem rmFirst"><a class="rmLink" href="frmchangepassword.aspx"><span class="rmText">Change UMS Password</span></a></li><li class="rmItem "><a class="rmLink" href="frmAdPassword.aspx"><span class="rmText">Reset Internet Password</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="SecretGridUMS.aspx"><span class="rmText">Secret Grid</span></a></li>
+				</ul>
+			</div></li>
+		</ul>
+	</div><input id="ctl00_WcHeaderforStudent1_radStudentMenu_ClientState" name="ctl00_WcHeaderforStudent1_radStudentMenu_ClientState" type="hidden" />
+</div>
+            </div>
+            <div class="nav_right">
+                <ul>
+                    <li><a href="lpStudent.aspx">
+                        <div class="nav_lp_icon">
+                        </div>
+                        Go to LP</a></li>
+                    <li><a href="Default3.aspx" id="ctl00_WcHeaderforStudent1_lnkHome">
+                        <div class="nav_home_icon">
+                        </div>
+                        Home</a></li>
+                    <li><a href="RemoveSession.aspx">
+                        <div class="nav_logout_icon">
+                        </div>
+                        Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="idea">
+    <div class="main">
+        <div class="feedback_heading">
+            Idea Hub<span id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_Label1" title="The Worthy Pro-chancellor,LPU has taken special interest for inviting innovative ideas from students.She has not only appreciated the ideation from the students but has also been eagerly for seeing that the students are helped to translate those idea into reality." class="aspLabel" style="color:White;">(Concept Note)</span>
+            <div id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_vd1" class="aspValidationSummary" style="display:none;">
+
+</div>
+        </div>
+        <table width="100%" cellpadding="7" cellspacing="5" border="0">
+            <tr>
+                <td width="98%">
+                    <strong>Title of your Idea</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$txtProject" type="text" maxlength="200" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_txtProject" class="aspTextBox" /><span id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1" class="aspRequiredFieldValidator" style="visibility:hidden;">*</span>
+                    <input type="hidden" name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$TextBoxWatermarkExtender1_ClientState" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_TextBoxWatermarkExtender1_ClientState" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Aim</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$ddlAim" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_ddlAim" class="aspDropDownList" style="width:262px;">
+	<option value="Select aim">Select aim</option>
+	<option value="Innovation">Innovation</option>
+	<option value="Improve Efficiency">Improve Efficiency</option>
+	<option value="User Friendly">User Friendly</option>
+	<option value="Improve Connect">Improve Connect</option>
+	<option value="System Oriented and Automation">System Oriented and Automation</option>
+	<option value="Budget Control/ Optimum Utilization of Resources">Budget Control/ Optimum Utilization of Resources</option>
+	<option value="Any Other">Any Other</option>
+
+</select>
+                    <span id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3" class="aspRequiredFieldValidator" style="visibility:hidden;">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Description</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$txtDescription" rows="2" cols="20" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_txtDescription" class="aspTextBox" style="height:30px;resize:none">
+</textarea><span id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2" class="aspRequiredFieldValidator" style="display:none;">*</span>
+                    <span id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1" class="aspRegularExpressionValidator" style="display:none;">Text Too Long</span>
+                    <input type="hidden" name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$TextBoxWatermarkExtender2_ClientState" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_TextBoxWatermarkExtender2_ClientState" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Do you have any expert to supervise(If any):</strong>
+                     
+                </td>
+            </tr>
+         
+            <tr>
+                <td align="left">
+                    <div id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_UpdatePanel1">
+	
+                            <table id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus" class="aspRadioButtonList" onchange="return selectValue();">
+		<tr>
+			<td><span><input id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_0" type="radio" name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$rdStatus" value="N" checked="checked" /><label for="ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_0">None</label></span></td><td><span><input id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_1" type="radio" name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$rdStatus" value="S" /><label for="ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_1">Peer</label></span></td>
+		</tr><tr>
+			<td><span><input id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_2" type="radio" name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$rdStatus" value="E" /><label for="ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_2">External</label></span></td><td><span><input id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_3" type="radio" name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$rdStatus" value="I" /><label for="ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_3">Internal</label></span></td>
+		</tr>
+	</table>
+                        
+</div>
+                </td>
+            </tr>
+            <tr id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorLabel" style="display:none">
+	<td align="left">
+                    <span id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_Label21" class="aspLabel">Supervisour Detail:</span>
+                </td>
+</tr>
+
+            <tr id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorDetail" style="display:none">
+	<td align="left">
+                    <input name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$txtSupervisourDetail" type="text" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_txtSupervisourDetail" class="aspTextBox" />
+                    <input type="hidden" name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$TextBoxWatermarkExtender3_ClientState" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_TextBoxWatermarkExtender3_ClientState" />
+                </td>
+</tr>
+          
+            <tr>
+                <td>
+                    <strong>Attach a Idea proposal (If Any)</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="file" name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$fuAttachementforidea" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_fuAttachementforidea" class="aspFileUpload" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="ctl00$WcHeaderforStudent1$WUCStudentIdea1$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$WcHeaderforStudent1$WUCStudentIdea1$btnSubmit&quot;, &quot;&quot;, true, &quot;idea&quot;, &quot;&quot;, false, false))" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_btnSubmit" class="aspButton" />
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <span id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_lblDisclaimer" class="aspLabel">Disclaimer:- The Ideas recieved from students <br/> will be screened by a committee and the <br/> best Ideas will be supported for their <br/> implementation</span>
+                </td>
+            </tr>
+        </table>
+        <a href="#" id="ctl00_WcHeaderforStudent1_WUCStudentIdea1_feedbackbutton1" class="red pull_feedback" onclick="tooglefeedback2();" title="Click to leave feedback"></a>
+    </div>
+</div>
+<script type="text/javascript">
+    var isopen = false;
+    function tooglefeedback2() {
+
+        if (!isopen) {
+            
+            $("#idea").animate({ left: "0px" });
+            isopen = true;
+        }
+        else {
+            
+            $("#idea").animate({ left: "-289px" });
+            isopen = false;
+        }
+
+    }
+    function selectValue() {
+        //alert("Hello");
+
+        if (document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_1").checked == true) {
+
+
+            var textboxWaterMark = $find("WaterMark");
+            textboxWaterMark.set_WatermarkText('Name of Internal/External Student Mentor.');
+
+            //alert("Hello");ctl00_WcHeaderforStudent1_WUCStudentIdea1_Label21
+            //document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorLabel").visible = true;
+            $("#ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorLabel").show(10);
+            $("#ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorDetail").show(10);
+
+        }
+        if (document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_2").checked == true) {
+
+            var textboxWaterMark = $find("WaterMark");
+            textboxWaterMark.set_WatermarkText('Name of External Resource Person.');
+            //alert("Hello");ctl00_WcHeaderforStudent1_WUCStudentIdea1_Label21
+            //document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorLabel").visible = true;
+            $("#ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorLabel").show(10);
+            $("#ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorDetail").show(10);
+
+        }
+        if (document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_3").checked == true) {
+
+            var textboxWaterMark = $find("WaterMark");
+            textboxWaterMark.set_WatermarkText('Name of Internal Staff Person.');
+            //alert("Hello");ctl00_WcHeaderforStudent1_WUCStudentIdea1_Label21
+            //document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorLabel").visible = true;
+            $("#ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorLabel").show(10);
+            $("#ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorDetail").show(10);
+
+        }
+        if (document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_rdStatus_0").checked == true) {
+            //alert("Hello");
+            //document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorLabel").visible=false;
+            $("#ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorLabel").hide(10);
+            $("#ctl00_WcHeaderforStudent1_WUCStudentIdea1_RowSupervisorDetail").hide(10);
+
+        }
+    }
+</script>
+
+
+
+                    <div id="middle">
+                        <div class="homepage">
+                            
+
+
+
+   
+
+
+
+    <table style="width: 100%; background-color: #cccccc" id="setBorder" class="centerTable"
+        cellspacing="1" cellpadding="1" border="0">
+        <tr>
+            <td class="form_header" align="center">
+                Student Download Assignment</td>
+        </tr>
+        <tr>
+            <td align="center" class="input_form_td">&nbsp;</td>
+
+        </tr>
+        <tr>
+            <td align="center" class="input_form_td">&nbsp;</td>
+
+        </tr>
+        <tr>
+            <td align="center" class="input_form_td">
+
+                <div style="overflow: scroll; width: 970px">
+                    <div>
+	<table class="aspGridView" cellspacing="0" id="ctl00_cphHeading_GridView1" style="border-collapse:collapse;">
+		<tr class="aspGridView_HeaderStyle" align="left">
+			<th scope="col" style="width:10%;">View</th><th scope="col">Course Code</th><th scope="col">Course Name</th><th scope="col">Lecture Notes</th><th scope="col">Practical</th><th scope="col">Reading Material</th><th scope="col">Test</th>
+		</tr><tr class="aspGridView_RowStyle">
+			<td align="center" style="width:10%;">
+                                    <input type="submit" name="ctl00$cphHeading$GridView1$ctl02$btnViewDetails" value="View Details" id="ctl00_cphHeading_GridView1_ctl02_btnViewDetails" class="aspButton" />
+                                </td><td>CSE306</td><td>COMPUTER NETWORKS</td><td>-</td><td>-</td><td>4</td><td>1</td>
+		</tr><tr class="aspGridView_AlternatingRowStyle">
+			<td align="center" style="width:10%;">
+                                    <input type="submit" name="ctl00$cphHeading$GridView1$ctl03$btnViewDetails" value="View Details" id="ctl00_cphHeading_GridView1_ctl03_btnViewDetails" class="aspButton" />
+                                </td><td>CSE307</td><td>COMPUTER NETWORKS LABORATORY</td><td>2</td><td>1</td><td>-</td><td>-</td>
+		</tr><tr class="aspGridView_RowStyle">
+			<td align="center" style="width:10%;">
+                                    <input type="submit" name="ctl00$cphHeading$GridView1$ctl04$btnViewDetails" value="View Details" id="ctl00_cphHeading_GridView1_ctl04_btnViewDetails" class="aspButton" />
+                                </td><td>CSE310</td><td>PROGRAMMING IN JAVA</td><td>-</td><td>-</td><td>7</td><td>-</td>
+		</tr><tr class="aspGridView_AlternatingRowStyle">
+			<td align="center" style="width:10%;">
+                                    <input type="submit" name="ctl00$cphHeading$GridView1$ctl05$btnViewDetails" value="View Details" id="ctl00_cphHeading_GridView1_ctl05_btnViewDetails" class="aspButton" />
+                                </td><td>CSE316</td><td>OPERATING SYSTEMS</td><td>-</td><td>-</td><td>1</td><td>-</td>
+		</tr><tr class="aspGridView_RowStyle">
+			<td align="center" style="width:10%;">
+                                    <input type="submit" name="ctl00$cphHeading$GridView1$ctl06$btnViewDetails" value="View Details" id="ctl00_cphHeading_GridView1_ctl06_btnViewDetails" class="aspButton" />
+                                </td><td>CSE322</td><td>FORMAL LANGUAGES AND AUTOMATION THEORY</td><td>4</td><td>-</td><td>-</td><td>1</td>
+		</tr><tr class="aspGridView_AlternatingRowStyle">
+			<td align="center" style="width:10%;">
+                                    <input type="submit" name="ctl00$cphHeading$GridView1$ctl07$btnViewDetails" value="View Details" id="ctl00_cphHeading_GridView1_ctl07_btnViewDetails" class="aspButton" />
+                                </td><td>CSE408</td><td>DESIGN AND ANALYSIS OF ALGORITHMS</td><td>5</td><td>-</td><td>3</td><td>1</td>
+		</tr><tr class="aspGridView_RowStyle">
+			<td align="center" style="width:10%;">
+                                    <input type="submit" name="ctl00$cphHeading$GridView1$ctl08$btnViewDetails" value="View Details" id="ctl00_cphHeading_GridView1_ctl08_btnViewDetails" class="aspButton" />
+                                </td><td>MTH302</td><td>PROBABILITY AND STATISTICS</td><td>-</td><td>-</td><td>2</td><td>1</td>
+		</tr><tr class="aspGridView_AlternatingRowStyle">
+			<td align="center" style="width:10%;">
+                                    <input type="submit" name="ctl00$cphHeading$GridView1$ctl09$btnViewDetails" value="View Details" id="ctl00_cphHeading_GridView1_ctl09_btnViewDetails" class="aspButton" />
+                                </td><td>PEV106</td><td>VERBAL ABILITY-I</td><td>-</td><td>-</td><td>-</td><td>1</td>
+		</tr>
+	</table>
+</div>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td align="center" class="input_form_td">
+                <div style="float: left; padding-left: 20px">
+                    <input type="submit" name="ctl00$cphHeading$Button1" value="View All" id="ctl00_cphHeading_Button1" class="aspButton" style="width:100px;" />
+                </div>
+                <br />
+            </td>
+
+        </tr>
+        <tr>
+            <td align="center" class="input_form_td">
+                
+            </td>
+
+        </tr>
+        <tr>
+            <td align="center" class="input_form_td">&nbsp;</td>
+
+        </tr>
+        <tr>
+            <td align="center" class="input_form_td">
+                
+            </td>
+
+        </tr>
+        <tr>
+            <td align="center" class="input_form_td">&nbsp;</td>
+
+        </tr>
+        <tr>
+            <td align="center" class="input_form_td">
+
+                
+
+            </td>
+
+        </tr>
+    </table>
+
+
+
+
+    
+
+
+
+    
+
+
+    <input type="hidden" name="ctl00$cphHeading$HiddenField1" id="ctl00_cphHeading_HiddenField1" />
+
+    
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+              <input type="hidden" id="hrdMaximunTime" />
+        <input type="hidden" id="hrdIsUMSBlocked" />
+          <div id="divTesting" class="dialog-height" style="display:none">
+          
+             <div id="divUMSBlock" style="font-weight:bold;text-align:center;width:100%"> Your UMS is blocked due to following reasons</div>
+         <div id="divMessage"  style="max-height:400px;overflow:scroll" >
+
+          
+            </div>
+             <div  style="text-align: center"><input type="checkbox" id="chkReadMessage" /> I have read this information <input type="button" title="Click to confirm" value="Confirm" type="button" value="Ok" id="btnClose" /></div>
+             
+            </div>
+
+        </div>
+        
+        
+
+        
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_vd1"));
+var Page_Validators =  new Array(document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1"), document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3"), document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2"), document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_WcHeaderforStudent1_WUCStudentIdea1_vd1 = document.all ? document.all["ctl00_WcHeaderforStudent1_WUCStudentIdea1_vd1"] : document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_vd1");
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_vd1.showmessagebox = "True";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_vd1.showsummary = "False";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_vd1.validationGroup = "idea";
+var ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1 = document.all ? document.all["ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1"] : document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1");
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1.controltovalidate = "ctl00_WcHeaderforStudent1_WUCStudentIdea1_txtProject";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1.errormessage = "Please enter the idea";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1.validationGroup = "idea";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1.initialvalue = "";
+var ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3 = document.all ? document.all["ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3"] : document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3");
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3.controltovalidate = "ctl00_WcHeaderforStudent1_WUCStudentIdea1_ddlAim";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3.errormessage = "Please enter the idea";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3.validationGroup = "idea";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3.initialvalue = "Select aim";
+var ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2 = document.all ? document.all["ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2"] : document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2");
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2.controltovalidate = "ctl00_WcHeaderforStudent1_WUCStudentIdea1_txtDescription";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2.errormessage = "Please enter description";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2.display = "Dynamic";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2.validationGroup = "idea";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2.initialvalue = "";
+var ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1 = document.all ? document.all["ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1"] : document.getElementById("ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1");
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1.controltovalidate = "ctl00_WcHeaderforStudent1_WUCStudentIdea1_txtDescription";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1.errormessage = "Text Too Long";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1.display = "Dynamic";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1.validationGroup = "idea";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1.validationexpression = "(\\s|.){0,1000}$";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+(function(id) {
+    var e = document.getElementById(id);
+    if (e) {
+        e.dispose = function() {
+            Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+    }
+})('ctl00_WcHeaderforStudent1_WUCStudentIdea1_vd1');
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("ctl00_WcHeaderforStudent1_UpdateProgress1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"_skin":"Default","attributes":{},"clientStateFieldID":"ctl00_WcHeaderforStudent1_radStudentMenu_ClientState","collapseAnimation":"{\"type\":12,\"duration\":200}","enableAutoScroll":true,"enableRootItemScroll":true,"expandAnimation":"{\"duration\":450}","itemData":[{"items":[{"items":[{"navigateUrl":"frmCentralMailReceived.aspx"},{"navigateUrl":"frmCentralMailTracking.aspx"}]},{"items":[{"items":[{"navigateUrl":"frmSummerTermCoursePreference.aspx"},{"navigateUrl":"frmStudentBacklogEntry.aspx"}]},{"navigateUrl":"frmExternalCertificates.aspx"},{"navigateUrl":"frmStudentExamAttendanceDisplay.aspx"},{"navigateUrl":"frmSeatingPlan.aspx"},{"navigateUrl":"frmDispalyOmrSheetlink.aspx"},{"navigateUrl":"frmStudentPaidTransaction.aspx"},{"navigateUrl":"frmProvisionalAdmitCard.aspx"},{"navigateUrl":"frmProvisionalDMCRequest.aspx"},{"items":[{"navigateUrl":"frmreappearfeereceipt.aspx"},{"navigateUrl":"frmExamRegisteration.aspx"},{"navigateUrl":"frmExamRegisterationAfterDate.aspx"}]},{"items":[{"navigateUrl":"frmSummerTermDeregistration.aspx"},{"navigateUrl":"frmSummerTermRegisteration.aspx"}]}]},{"items":[{"navigateUrl":"frmStudentSurveyForScheme.aspx"},{"navigateUrl":"frmStudentSurvey.aspx"},{"navigateUrl":"frmGuestLectureStudentFeedbackMaster.aspx"},{"navigateUrl":"frmSurveyTerms.aspx"}]},{"items":[{"navigateUrl":"frmStudentBankInformation.aspx"},{"navigateUrl":"frmStudentAccountsCertificates.aspx"},{"navigateUrl":"~/Static Information/SCHOALR CARDICAH CARD.pdf"},{"navigateUrl":"frmDepositFeeDetail.aspx"},{"navigateUrl":"~/Static Information/FEE_DEPOSIT_GUIDELINE2017.rar"},{"navigateUrl":"~/Reports/frmStudentFeeReceipt.aspx"},{"items":[{"navigateUrl":"~/Static Information/FEE_Notification_INR2017.rar"},{"navigateUrl":"~/Static Information/FEE_Notification_USD2017.rar"}]},{"navigateUrl":"~/Static Information/INFORMATION BROCHURE..pdf"},{"navigateUrl":"~/Reports/frmStatementofAccounts.aspx"},{"navigateUrl":"~/Static Information/ReimbursementUnderTakingnew.pdf"},{"navigateUrl":"frmAccountsRequestMaster.aspx"},{"navigateUrl":"frmStudentTokenAllotment.aspx"}]},{"items":[{"navigateUrl":"frmDoctorAppointmnt.aspx"}]},{"items":[{"navigateUrl":"frmCourseSyllabus.aspx"},{"items":[{"navigateUrl":"frmstudentdownloadassignment.aspx"},{"navigateUrl":"frmstudentassignmentupload.aspx"}]},{"navigateUrl":"frmCRQuestionnaire.aspx"},{"navigateUrl":"frmStudentElectiveCoursePolling.aspx"},{"navigateUrl":"frmEngineeringElectivePolling.aspx"},{"navigateUrl":"frmStudentEventsDutyLeave.aspx"},{"navigateUrl":"frmCourseIp.aspx"},{"navigateUrl":"frmCourseLm.aspx"},{"navigateUrl":"http://172.19.2.6:8580/webopac/html/searchform"},{"navigateUrl":"frmViewStudentMakeupAdjusment.aspx"},{"items":[{"navigateUrl":"frmMinorElectivePolling.aspx"},{"navigateUrl":"frmApplicableMinorElective.aspx"}]},{"navigateUrl":"frmMinorAreaPrefrence.aspx"},{"navigateUrl":"frmOESSECoursePrefrence.aspx"},{"navigateUrl":"frmOeRegistration.aspx"},{"items":[{"navigateUrl":"frmStudentUploadPractical.aspx"}]},{"navigateUrl":"~/Reports/frmSchemeReportforInternalCirculation.aspx"},{"items":[{"navigateUrl":"frmCapStudentListfaculty.aspx"}]},{"navigateUrl":"frmCapstoneStudentAttendanceView.aspx"},{"navigateUrl":"frmCapstoneStudentViewMarks.aspx"},{"navigateUrl":"frmStudentDutyDetail.aspx"},{"navigateUrl":"frmStudentCreditTransferUndertaking.aspx"},{"navigateUrl":"frmStudentTrainingExitContinueOptions.aspx"},{"navigateUrl":"frmStudentUploadCapstoneProject.aspx"},{"navigateUrl":"~/Reports/rptCourseWiseStudentAttendance.aspx"},{"items":[{"navigateUrl":"frmStudentResultDisplay.aspx"},{"navigateUrl":"frmMarksView.aspx"}]},{"navigateUrl":"~/Reports/frmStudentTimeTable.aspx"}]},{"items":[{"navigateUrl":"frmStudentPDFView.aspx"},{"navigateUrl":"http://112.196.62.20/login"},{"navigateUrl":"http://172.19.2.6:8580/webopac/html/searchform"}]},{"items":[{"navigateUrl":"frmStudentProfileUpdate.aspx"}]},{"navigateUrl":"http://lpuonline.in/eduonline"},{"items":[{"navigateUrl":"frmPlacementStudentShare.aspx"},{"navigateUrl":"frmStudentSessionRegistration.aspx"},{"navigateUrl":"frmPlacementPortalRegistration.aspx"},{"navigateUrl":"frmPlacementHome.aspx"},{"items":[{"navigateUrl":"frmStudentPlacmentIQBankAdd.aspx"},{"navigateUrl":"frmStudentPlacmentIQBank.aspx"}]},{"items":[{"navigateUrl":"~/Static Information/SPCPolicy.pdf"}]},{"navigateUrl":"frmSummerInternshipRegistration.aspx"}]},{"navigateUrl":"frmPressReleaseRequestByStudent.aspx"},{"items":[{"navigateUrl":"frmMtsMessage.aspx"},{"navigateUrl":"frmMtsUserHome.aspx"}]},{"items":[{"navigateUrl":"frmResearchAnnualSeminarRegister.aspx"},{"navigateUrl":"frmResearchDipStudent.aspx"},{"navigateUrl":"frmPhdScholarActivityDetail.aspx"},{"items":[{}]},{"navigateUrl":"frmResearchSotaRegister.aspx"}]},{"items":[{"navigateUrl":"frmViewHostelElectricityUnitDetails.aspx"},{"navigateUrl":"frmHostelCloakRoomApplication.aspx"},{"navigateUrl":"frmHostelConfiscationItemAcknowledgement.aspx"},{"navigateUrl":"frmStudentHostelLeaveApplication.aspx"},{"navigateUrl":"frmHostelMailAcknowledgeByStudent.aspx"},{"items":[{"navigateUrl":"frmNoFood.aspx"},{"navigateUrl":"frmLostCardRequest.aspx"}]},{"navigateUrl":"frmInternationalStudentsResidence.aspx"},{"items":[{"navigateUrl":"frmHostelPollingRefundForm.aspx"},{"navigateUrl":"frmStudentHostelChangeFoodPeriod.aspx"},{"navigateUrl":"frmHostelSwap.aspx"},{"navigateUrl":"frmHostelSeaterChangePreference.aspx"},{"navigateUrl":"frmStudentHostelBookingWaitList.aspx"},{"navigateUrl":"frmStudentHostelBooking.aspx"},{"navigateUrl":"frmHostelPollingAfterBooking.aspx"},{"navigateUrl":"frmHostelPreferenceForPEP.aspx"},{"navigateUrl":"frmMakeICashPaymentForHostelPolling.aspx"},{"navigateUrl":"frmSummerTermHostelBooking.aspx"}]},{"items":[{"navigateUrl":"frmVehicleTracker.aspx"},{"navigateUrl":"frmStudentTransportPreference.aspx"}]},{"navigateUrl":"frmHostelDeallocationActionTakenByStudent.aspx"},{"navigateUrl":"frmCampusItemSearch.aspx"}]},{"items":[{"navigateUrl":"frmVisitorGatePassStudentRequest.aspx"},{"navigateUrl":"frmStudentRFIDPassFormWithICash.aspx"}]},{"items":[{"navigateUrl":"frmStudentClubRegisteration.aspx"},{"navigateUrl":"frmSportsClubStudentAttendance.aspx"},{"navigateUrl":"frmdlStudentEventRegister.aspx"},{"navigateUrl":"frmStudentInventoryDistributionReport.aspx"},{"navigateUrl":"frmDSAStudentsEventRegistration.aspx"},{"navigateUrl":"frmStudentRegisterPartTimejobReport.aspx"},{"navigateUrl":"frmDSAStudentPolicyView.aspx"}]}]},{"items":[{"items":[{"navigateUrl":"~/Static Information/Academic calender/AcademicCalendarsPh.DProgrammesFullandparttimeforSpringTermSession1718.pdf"},{"navigateUrl":"~/Static Information/Academic calender/Academic_Calendar_for_Autumn_Term_of_Academic_Session_2017-18_for_B._Pharmacy_and_M_Pharmacy_Programmes.pdf"},{"navigateUrl":"~/Static Information/Academic calender/AcademicCalendars-FullTimeProgrammesforAutumnTermSession1718.pdf"},{"navigateUrl":"~/Static Information/Academic calender/Academic_Calendars_for_all_Full_Time_Programmes_offered_in_School_of_BPT_and_MPT_for_Autumn_Term_(Session_2017-18).pdf"},{"navigateUrl":"~/Static Information/Academic calender/Academic_Calendars_For_all_Full_Time_Programmes_offered_in_School_of_Physical_Education_for_Autumn_Term_(Session_2017-18).pdf"},{"navigateUrl":"~/Static Information/Academic calender/Academic_Calendars_FullTime_Programmes_for_SpringTermSession2017-18.pdf"},{"navigateUrl":"~/Static Information/Academic calender/AcademicCalendarsforallFullTimeProgrammesofferedinSchoolofEducationforSpringTerm(Session2017-18).pdf"},{"navigateUrl":"~/Static Information/Academic calender/AcademicCalendarsforallFullTimeProgrammesofferedinSchoolofLawforSpringTerm(Session2017-18).pdf"},{"navigateUrl":"~/Static Information/Academic calender/AcademicCalendarforSpringTermofAcademicSession2017-18forallFullTimeprogrammesofferedinSchoolofPhysicalEducation.pdf"},{"navigateUrl":"~/Static Information/AC_MASTERSOFPHYSIOTHERAPY16161.pdf"},{"navigateUrl":"~/Static Information/Academic calender/Academic_Calendars_for_all_Part_Time_Programmes_for_Autumn_Term_(Session_2017-18).pdf"},{"navigateUrl":"~/Static Information/Academic calender/AcademicCalendarforSpringTerm201718PartTimeprogrammes.pdf"}]},{"navigateUrl":"frmDuplicateIdCardApplicationForm.aspx"},{"navigateUrl":"frmTurnStileAppointmentDetails.aspx"},{"items":[{"navigateUrl":"~/Static Information/CSE/SCSE Induction Presentation 2016-Day1-1Aug.pdf"},{"navigateUrl":"~/Static Information/CSE/SCSE Induction Presentation 2016-Day 2.pdf"},{"navigateUrl":"~/Static Information/CSE/Student Self Development Roadmap B.Tech CSEIT.pdf"}]},{"items":[{"navigateUrl":"~/Static Information\\External CA format for Internship.pdf"},{"navigateUrl":"~/Static Information/Guidelines_for_Inviting_External_Examiners_for_Dissertation_Evaluations_Excluding_M.Phil_PhD.pdf"},{"navigateUrl":"~/Static Information/Guidelines for Dissertation for Master Degree Programs Except for M.Phil. Programs Applicable to Academic Session 2014-15.pdf"},{"navigateUrl":"~/Static Information/Guidelines for Project Courses Including Capstone  For Academic Session 2014-15.pdf"},{"navigateUrl":"~/Static Information/Evaluation Guidelines and Timeline for Dessertation-I.pdf"}]},{"navigateUrl":"frmFormatsStudents.aspx"},{"navigateUrl":"Emergency_Hotline_Numbers.html"},{"navigateUrl":"~/Static Information/MTE ETE Examination Pattern.pdf"},{"navigateUrl":"~/Static Information/Academic calender/GUIDELINES FOR TAKING OPTION FROM STUDENTS ADMITTED IN DUAL DEGREE PROGRAMMES FOR CONTINUING OR DISCONTINUING THE PURSUANCE OF HIGHER DEGREE.pdf"},{"navigateUrl":"~/Static Information/Siteplan16.jpg"},{"navigateUrl":"~/Static Information/Interaction Timings with Higher Authorities.pdf"},{"navigateUrl":"frmLostAndFoundReport.aspx"},{"navigateUrl":"~/Static Information/DoctorList.htm"},{"navigateUrl":"frmstudentaccommodationdetails.aspx"},{"items":[{"items":[{"navigateUrl":"~/Static Information/Academic calender/An Extract of changes in rules w e f Session 2013-14.pdf"}]},{"items":[{"navigateUrl":"~/Policy/StudentFee/S.No. 5.pdf"},{"navigateUrl":"~/Policy/StudentFee/S.No. 6.pdf"}]},{"navigateUrl":"~/Static Information/Guidelines_for_Issuance_of_requipments_from_School of_Journalism_,Film_and_Creative_Arts.pdf"},{"navigateUrl":"~/Static Information/Library Policy.pdf"},{"navigateUrl":"~/Static Information/Policy for International Students.pdf"}]},{"navigateUrl":"frmGrievanceRequestMaster.aspx"}]},{"items":[{"navigateUrl":"frmchangepassword.aspx"},{"navigateUrl":"frmAdPassword.aspx"},{"navigateUrl":"SecretGridUMS.aspx"}]}]}, null, null, $get("ctl00_WcHeaderforStudent1_radStudentMenu"));
+});
+
+document.getElementById('ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator1'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_WcHeaderforStudent1_WUCStudentIdea1_TextBoxWatermarkExtender1_ClientState","id":"ctl00_WcHeaderforStudent1_WUCStudentIdea1_TextBoxWatermarkExtender1","watermarkText":"Enter title of the idea"}, null, null, $get("ctl00_WcHeaderforStudent1_WUCStudentIdea1_txtProject"));
+});
+
+document.getElementById('ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator3'));
+}
+
+document.getElementById('ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_WcHeaderforStudent1_WUCStudentIdea1_RequiredFieldValidator2'));
+}
+
+document.getElementById('ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_WcHeaderforStudent1_WUCStudentIdea1_regex1'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_WcHeaderforStudent1_WUCStudentIdea1_TextBoxWatermarkExtender2_ClientState","id":"ctl00_WcHeaderforStudent1_WUCStudentIdea1_TextBoxWatermarkExtender2","watermarkText":"Enter full description of the idea"}, null, null, $get("ctl00_WcHeaderforStudent1_WUCStudentIdea1_txtDescription"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_WcHeaderforStudent1_WUCStudentIdea1_TextBoxWatermarkExtender3_ClientState","id":"WaterMark","watermarkText":"Expert can be Internal/External faculty"}, null, null, $get("ctl00_WcHeaderforStudent1_WUCStudentIdea1_txtSupervisourDetail"));
+});
+//]]>
+</script>
+</form>
+
+       <script type="text/javascript">
+           var clearInt;
+           var totalMessages = 0;
+           var listofConfimationIDs = [];
+           //clearInt = setInterval(displayDialog, 5000);
+
+
+
+           function getUpdatedMessages() {
+               totalMessages = 0;
+               $('#divMessage').empty();
+               var UserID = '11616140';
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "WsEmployeeSearch.asmx/MessageDetails",
+                data: JSON.stringify({ EmpCode: UserID }),
+                dataType: "json",
+                success: function (data) {
+                    data=data.d;
+                    $('#hrdMaximunTime').val('0');
+                    var atttable = "<table  class='at-table' ><tbody>";
+
+                    var row = "";
+                    for (var i = 0; i < data.length; i++) {
+                        totalMessages += 1;
+                        $('#hrdMaximunTime').val(data[i].RepeatMessageAfterMiliSecond);
+                        listofConfimationIDs.push(data[i].ID);
+                        row = '<tr>';
+                        row += '<td style="vertical-align:top">' + data[i].SrNo + '</td>';
+                        row += '<td style="vertical-align:top">' + data[i].Description + '</td>';
+                        row += '</tr>';
+                        atttable += row;
+                    }
+
+                    atttable += '</tbody></table>';
+                    $('#divMessage').html(atttable);
+
+                    if ($('#hrdMaximunTime').val() > 0) {
+                        // displayDialog();
+                        clearInt = setInterval(displayDialog, $('#hrdMaximunTime').val());
+                    }
+                    else if (data.length > 0) {
+                        displayDialog();
+                    }
+                    else {
+
+                    }
+                }
+                             ,
+                error: function (result) {
+                    //alert("Error");
+                }
+            });
+        }
+
+        function displayDialog() {
+            clearInterval(clearInt);
+            if ($('#hrdIsUMSBlocked').val() == 'Yes')
+                $('#divUMSBlock').show('fast');
+            else
+                $('#divUMSBlock').hide('fast');
+
+            $("#divTesting").dialog
+                       ({
+                           title: "Important Information for you",
+                           width: 750,
+                           resizable: false,
+                           modal: true,
+                           closeOnEscape: false,
+                           dialogClass: 'no-close',
+                           draggable: false,
+                       });
+
+            $('#divTesting').prev('div').css({ 'color': 'white', 'background-color': 'red' });
+            var height = $('#divTesting').css('height');            //$('#ui-id-5').next('a').hide();
+
+            height = height.substr(0, height.length - 2);
+
+            if (height > 400) {
+                $('#divTesting').parent('div').css({ 'margin-top': '0px' });
+            }
+            else if (height > 300) {
+                $('#divTesting').parent('div').css({ 'margin-top': '0px' });
+            }
+            else if (height > 200) {
+                $('#divTesting').parent('div').css({ 'margin-top': '40px' });
+            }
+            else if (height > 150) {
+                $('#divTesting').parent('div').css({ 'margin-top': '60px' });
+            }
+            else if (height > 125) {
+                $('#divTesting').parent('div').css({ 'margin-top': '80px' });
+            }
+
+            else if (height > 100) {
+                $('#divTesting').parent('div').css({ 'margin-top': '100px' });
+            }
+
+            else {
+                $('#divTesting').parent('div').css({ 'margin-top': '150px' });
+            }
+        }
+
+
+
+        $(document).ready(function ()
+        {
+            $('#btnClose').attr('disabled', 'disabled');
+            $('#divUMSBlock').hide('fast');
+
+            $('#divTesting').hide();
+            var EmpCode = '11616140';
+
+            $('#divMessage').empty();
+            var UserID = '11616140';
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "WsEmployeeSearch.asmx/MessageDetails",
+                data: JSON.stringify({ EmpCode: UserID }),
+                dataType: "json",
+                success: function (data) {
+                    data = data.d;
+                    $('#hrdMaximunTime').val('0');
+                    var atttable = "<table  class='at-table' ><tbody>";
+
+                    var row = "";
+                    for (var i = 0; i < data.length; i++) {
+                        totalMessages += 1;
+
+                        if (data[i].IsBlocked == 'True') {
+                            $('#hrdIsUMSBlocked').val('Yes');
+
+                            $('#hrdMaximunTime').val(data[i].RepeatMessageAfterMiliSecond);
+                            listofConfimationIDs.push(data[i].ID);
+                            row = '<tr style="font-weight:bold">';
+                            row += '<td style="vertical-align:top">' + data[i].SrNo + '</td>';
+                            row += '<td style="vertical-align:top" >' + data[i].Description + '</td>';
+                            //row += '<td style="vertical-align:top" >' + data[i].IsBlocked + '</td>';
+                            row += '</tr>';
+                            atttable += row;
+                        }
+                        else {
+
+
+                            $('#hrdMaximunTime').val(data[i].RepeatMessageAfterMiliSecond);
+                            listofConfimationIDs.push(data[i].ID);
+                            row = '<tr>';
+                            row += '<td style="vertical-align:top">' + data[i].SrNo + '</td>';
+                            row += '<td style="vertical-align:top" >' + data[i].Description + '</td>';
+                            //row += '<td style="vertical-align:top" >' + data[i].IsBlocked + '</td>';
+                            row += '</tr>';
+                            atttable += row;
+                        }
+                    }
+
+                    atttable += '</tbody></table>';
+                    $('#divMessage').html(atttable);
+
+
+                    if (totalMessages > 0) {
+                        displayDialog();
+                    }
+                }
+                             ,
+                error: function (result) {
+                    //alert("Error");
+                }
+            });
+
+
+            $('#btnClose').click(function () {
+
+                var userID = '11616140';
+                    var ID = "";
+
+                    for (i = 0; i < listofConfimationIDs.length ; i++) {
+                        ID = listofConfimationIDs[i];
+                        $.ajax({
+                            type: "POST",
+                            contentType: "application/json; charset=utf-8",
+                            url: "WsEmployeeSearch.asmx/UpdateMessageDetails",
+                            data: JSON.stringify({ Id: ID, EmpCode: userID }),
+                            dataType: "json",
+                            success: function (data) {
+
+                            }
+                        });
+                    }
+
+
+
+                    $('#btnClose').removeClass('enableClosedialog');
+                    $('#btnClose').addClass('disableClosedialog');
+                    $("#chkReadMessage").attr('checked', false);
+                    $('#btnClose').attr('disabled', 'disabled');
+                    $("#divTesting").dialog('close');
+
+
+                    if ($('#hrdIsUMSBlocked').val() == 'Yes') {
+
+
+                        window.location.replace('https://ums.lpu.in/lpuums/loginnew.aspx');
+               
+                    }
+                    else {
+                        getUpdatedMessages();
+                    }
+                });
+
+
+            $('#chkReadMessage').click(function () {
+                if ($(this).is(':checked')) {
+                    $('#btnClose').removeAttr('disabled');
+                    $('#btnClose').removeClass('disableClosedialog');
+                    $('#btnClose').addClass('enableClosedialog');
+                }
+                else {
+                    $('#btnClose').attr('disabled', 'disabled');
+                    $('#btnClose').removeClass('enableClosedialog');
+                    $('#btnClose').addClass('disableClosedialog');
+                }
+            });
+        });
+
+
+
+    </script>
+
+</body>
+</html>

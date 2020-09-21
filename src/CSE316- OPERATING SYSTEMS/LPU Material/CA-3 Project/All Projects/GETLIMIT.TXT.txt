@@ -1,0 +1,69 @@
+//Program for full duplex communication
+#include <iostream>
+using namespace std;
+#include<stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main()
+{
+
+        int status, pid, pipefds[2],pipefds2[2],status2;
+        char instring[20],instring2[20];
+
+	/* Create the pipe and return 2 file descriptors in the pipefds array */
+	/* This operation is done before the fork so that both processes will */
+	/* know about the same pipe, which will allow them to communicate.  */
+        status = pipe(pipefds); 
+	status2=pipe(pipefds2);
+	if (status == -1)
+	{
+		perror("Trouble");
+		exit(1);
+	}
+        if (status2 == -1)
+	{
+		perror("Trouble");
+		exit(1);
+	}
+
+	/* create child process; both processes continue from here */
+        pid = fork();
+        if (pid == -1)           
+	{
+		perror("Trouble");
+		exit(2);
+	}
+        else if (pid == 0)           /* child : sends message to parent*/
+	{
+		/* close unused end of pipe */
+		/* because this process only needs to write */
+		close(pipefds[0]);
+                close(pipefds2[1]);
+		/* send 7 characters in the string, including end-of-string */
+		cout << "About to send a message: " << endl;
+                write(pipefds[1], "Hi Mom!", 7); 
+                
+                read(pipefds2[0], instring2, 7);
+cout << "Just received a message that says: " << instring2 << endl; 
+		close(pipefds[1]);
+                close(pipefds2[0]);
+		exit(0);
+	}
+        else		/* parent : receives message from child */
+	{
+		/* close unused end of pipe */
+		/* because this process only needs to read */
+		close(pipefds[1]);
+
+		/* read from the pipe */
+                write(pipefds2[1], "Hi pop!", 7); 
+                read(pipefds[0], instring, 7);
+		cout << "Just received a message that says: " << instring << endl;
+
+		close(pipefds[0]);
+                close(pipefds2[1]);
+		exit(0);
+	}
+return 0;
+}

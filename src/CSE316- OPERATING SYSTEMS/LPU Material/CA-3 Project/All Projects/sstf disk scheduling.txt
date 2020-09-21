@@ -1,0 +1,58 @@
+#include<conio.h>
+02	#include<stdio.h>
+03	struct di
+04	{
+05	int num;
+06	int flag;
+07	};
+08	int main()
+09	{
+10	 int i,j,sum=0,n,min,loc,x,y;
+11	 struct di d[20];
+12	 int disk;
+13	 int ar[20],a[20];
+14	 clrscr();
+15	 printf("enter number of location\t");
+16	 scanf("%d",&n);
+17	 printf("enter position of head\t");
+18	 scanf("%d",&disk);
+19	 printf("enter elements of disk queue\n");
+20	 for(i=0;i<n;i++)
+21	 {
+22	 scanf("%d",&d[i].num);   d[i]. flag=0;
+23	 }
+24	 for(i=0;i<n;i++)
+25	 {                 x=0; min=0;loc=0;
+26	  for(j=0;j<n;j++)
+27	  {
+28	   if(d[j].flag==0)
+29	   {
+30	   if(x==0)
+31	   {
+32	   ar[j]=disk-d[j].num;
+33	   if(ar[j]<0){ ar[j]=d[j].num-disk;}
+34	   min=ar[j];loc=j;x++; }
+35	   else
+36	   {
+37	   ar[j]=disk-d[j].num;
+38	   if(ar[j]<0){ ar[j]=d[j].num-disk;}
+39	    }
+40	    if(min>ar[j]){ min=ar[j]; loc=j;}
+41	   }
+42	  }
+43	     d[loc].flag=1;
+44	     a[i]=d[loc].num-disk;
+45	     if(a[i]<0){a[i]=disk-d[loc].num;}
+46	 
+47	     disk=d[loc].num;
+48	 }
+49	 
+50	 
+51	 for(i=0;i<n;i++)
+52	 {
+53	 sum=sum+a[i];     
+54	 }
+55	       printf("\nmovement of total cylinders %d",sum);
+56	 getch();
+57	 return 0;
+58	}

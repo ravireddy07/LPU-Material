@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc, char *argv[])
+{
+	char *value;
+	int i;
+	value = getenv(argv[1]);
+	printf(“value of %s is %s\n”, argv[1], value);
+	value=malloc(strlen(argc[1]) + strlen(argc[2]) + 2);
+	strcpy(value, argv[1]);
+	strcat(value, “=“);
+	strcat(value, argc[2]);
+	printf(“Calling putenv:%s\n”, value);
+	putenv(value); //assigns new value to arg[1]
+	value=getenv(argv[1]);
+	 printf(“new value of %s is %s\n”, argv[1], value);
+}

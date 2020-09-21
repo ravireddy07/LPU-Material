@@ -1,0 +1,37 @@
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+void * fact(void * arg)
+{ int i,x,mul=1;
+    int *a = (int *)arg; 
+ x=*a;
+    printf("value recieved %d\n", x);
+ for(i=x;i>0;i--)
+ {
+  mul=mul*i;
+ }
+ *a=mul;
+    return (a);
+}
+int main()
+{ 
+ void *thread_result;
+    int i,res,no;
+    pthread_t thread_tid;
+ printf("Enter value for finding factorial : \t");
+ scanf("%d",&no);
+ res= pthread_create(&thread_tid, NULL,fact, (void *)&no);
+ if (res != 0) 
+ {
+ perror("Thread creation failed");
+ exit(EXIT_FAILURE);
+ }
+   res= pthread_join(thread_tid, &thread_result);
+ if (res != 0)
+ {
+ perror("Thread join failed");
+ exit(EXIT_FAILURE);
+ }
+    printf("fact is  %d\n",*(int *)thread_result);
+ return 0;
+}
