@@ -1,0 +1,6 @@
+## Supervised Learning
+   # --Regression(To Predict any Numerical Value)
+   # --Classification(To Predict Label)
+         # --KNN (Mostly works on Numerical data) (High Accuracy) (Low Performance)
+         # --Naive bias (mostly works on Categorical data) (High Accuracy-less than KNN) (High Performance)
+         # --Decision Trees(Works on Both types of Data)

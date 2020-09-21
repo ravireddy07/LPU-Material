@@ -1,0 +1,7 @@
+1--import Dataset into variable names DATA
+2--Clean the structure of DATA
+   i.e.., Make admit as factors withlevels as YES/NO.
+          make Rank as Factors
+3--Remove Outliers & import NA
+4--Remove NA with implementation
+5--Normalize
